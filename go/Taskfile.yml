@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  build:
+    desc: Build Go scripts
+    cmds:
+      - cd aliases && go build -o {{.HOME}}/.nix-profile/bin/aliases-fzf .
+    sources:
+      - aliases/**/*.go
